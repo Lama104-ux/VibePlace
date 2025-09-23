@@ -36,7 +36,15 @@ export default function TabLayout() {
           ),
         }}
       />
-
+      <Tabs.Screen
+        name="favorites"
+        options={{
+          title: 'Favoriter',
+          tabBarIcon: ({ color, size }) => (
+            <Text style={{ fontSize: size || 24 }}>❤️</Text>
+          ),
+        }}
+      />
     </Tabs>
   );
 }
