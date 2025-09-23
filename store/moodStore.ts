@@ -18,3 +18,14 @@ export const favoritePlacesAtom = atom<Place[]>([]);
 // Atom för om appen laddar data
 export const loadingAtom = atom<boolean>(false);
 
+// Derived atom - hämtar platser som matchar valt humör
+export const filteredPlacesAtom = atom((get) => {
+    const selectedMood = get(selectedMoodAtom);
+    const recommendedPlaces = get(recommendedPlacesAtom);
+
+    if (!selectedMood) return [];
+
+    return recommendedPlaces.filter(place =>
+        place.moodMatch.includes(selectedMood)
+    );
+});
