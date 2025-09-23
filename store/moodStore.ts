@@ -9,3 +9,6 @@ export const selectedMoodAtom = atom<MoodType | null>(null);
 // Atom för användarens nuvarande position
 export const userLocationAtom = atom<UserLocation | null>(null);
 
+// Atom för rekommenderade platser baserat på humör
+export const recommendedPlacesAtom = atom<Place[]>([]);
+
