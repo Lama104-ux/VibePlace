@@ -65,3 +65,72 @@ export const MoodButton: React.FC<Props> = ({ mood, isSelected, onPress }) => {
         runOnJS(onPress)(mood);
     };
 
+    // Skapa gradient-färger baserat på humörfärg
+    const gradientColors: [string, string] = [
+        mood.color,
+        mood.color + '80', // Lägg till transparens
+    ];
+
+    return (
+        <Animated.View style={[animatedStyle, selectedStyle]}>
+            <TouchableOpacity
+                style={styles.button}
+                onPress={handlePress}
+                activeOpacity={0.8}
+            >
+                <LinearGradient
+                    colors={gradientColors}
+                    style={styles.gradient}
+                    start={{ x: 0, y: 0 }}
+                    end={{ x: 1, y: 1 }}
+                >
+                    <Text style={styles.emoji}>{mood.emoji}</Text>
+                    <Text style={styles.name}>{mood.name}</Text>
+                    <Text style={styles.description}>{mood.description}</Text>
+                </LinearGradient>
+            </TouchableOpacity>
+        </Animated.View>
+    );
+};
+
+const styles = StyleSheet.create({
+    button: {
+        width: 160,
+        height: 120,
+        marginHorizontal: 8,
+        marginVertical: 8,
+        borderRadius: 16,
+        overflow: 'hidden',
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5,
+    },
+    gradient: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 12,
+    },
+    emoji: {
+        fontSize: 32,
+        marginBottom: 4,
+    },
+    name: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: 'white',
+        textAlign: 'center',
+        marginBottom: 2,
+    },
+    description: {
+        fontSize: 12,
+        color: 'white',
+        textAlign: 'center',
+        opacity: 0.9,
+    },
+});
