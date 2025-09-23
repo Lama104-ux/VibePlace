@@ -12,3 +12,6 @@ export const userLocationAtom = atom<UserLocation | null>(null);
 // Atom för rekommenderade platser baserat på humör
 export const recommendedPlacesAtom = atom<Place[]>([]);
 
+// Atom för användarens favoritplatser (sparas med SecureStore)
+export const favoritePlacesAtom = atom<Place[]>([]);
+
