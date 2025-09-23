@@ -5,3 +5,7 @@ import { MoodType, Place, UserLocation } from '../types/mood';
 
 // Atom för vilket humör användaren har valt
 export const selectedMoodAtom = atom<MoodType | null>(null);
+
+// Atom för användarens nuvarande position
+export const userLocationAtom = atom<UserLocation | null>(null);
+
