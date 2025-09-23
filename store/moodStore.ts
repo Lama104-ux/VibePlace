@@ -15,3 +15,6 @@ export const recommendedPlacesAtom = atom<Place[]>([]);
 // Atom för användarens favoritplatser (sparas med SecureStore)
 export const favoritePlacesAtom = atom<Place[]>([]);
 
+// Atom för om appen laddar data
+export const loadingAtom = atom<boolean>(false);
+
