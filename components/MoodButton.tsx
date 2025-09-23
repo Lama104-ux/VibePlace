@@ -19,3 +19,17 @@ interface Props {
     onPress: (mood: Mood) => void;
 }
 
+export const MoodButton: React.FC<Props> = ({ mood, isSelected, onPress }) => {
+    // Shared values för animationer
+    const scale = useSharedValue(1);
+    const breathingScale = useSharedValue(1);
+
+    // Starta "breathing" animationen när komponenten laddas
+    useEffect(() => {
+        breathingScale.value = withRepeat(
+            withTiming(1.05, { duration: 2000 }),
+            -1,
+            true
+        );
+    }, []);
+
