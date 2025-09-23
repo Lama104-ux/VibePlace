@@ -42,3 +42,26 @@ export const MoodButton: React.FC<Props> = ({ mood, isSelected, onPress }) => {
         };
     });
 
+    // Animerad stil för vald knapp
+    const selectedStyle = useAnimatedStyle(() => {
+        return {
+            opacity: isSelected ? 1 : 0.7,
+            transform: [
+                { scale: isSelected ? 1.1 : 1 }
+            ],
+        };
+    });
+
+    const handlePress = () => {
+        // Haptic feedback
+        Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+
+        // Spring animation när man trycker
+        scale.value = withSpring(0.95, { duration: 100 }, () => {
+            scale.value = withSpring(1, { duration: 200 });
+        });
+
+        // Kör onPress callback
+        runOnJS(onPress)(mood);
+    };
+
