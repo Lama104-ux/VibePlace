@@ -68,7 +68,7 @@ export const MoodButton: React.FC<Props> = ({ mood, isSelected, onPress }) => {
     // Skapa gradient-färger baserat på humörfärg
     const gradientColors: [string, string] = [
         mood.color,
-        mood.color + '80', // Lägg till transparens
+        mood.color + '80',
     ];
 
     return (
