@@ -33,3 +33,12 @@ export const MoodButton: React.FC<Props> = ({ mood, isSelected, onPress }) => {
         );
     }, []);
 
+    // Animerad stil för knappen
+    const animatedStyle = useAnimatedStyle(() => {
+        return {
+            transform: [
+                { scale: scale.value * breathingScale.value }
+            ],
+        };
+    });
+
