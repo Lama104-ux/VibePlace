@@ -32,3 +32,32 @@ export default function FavoritesScreen() {
 
     // Få alla humör som har favoriter
     const moodsWithFavorites = Object.keys(favoritesByMood) as MoodType[];
+
+    return (
+        <SafeAreaView style={styles.container}>
+            <StatusBar style="dark" />
+
+            {/* Header */}
+            <View style={styles.header}>
+                <Text style={styles.title}>Mina Favoriter</Text>
+                <Text style={styles.subtitle}>
+                    {favorites.length} sparade platser
+                </Text>
+            </View>
+
+            {favorites.length === 0 ? (
+                // Tom skärm när inga favoriter finns
+                <View style={styles.emptyContainer}>
+                    <Text style={styles.emptyIcon}>💔</Text>
+                    <Text style={styles.emptyTitle}>Inga favoriter än</Text>
+                    <Text style={styles.emptyText}>
+                        Utforska platser baserat på ditt humör och spara dina favoriter genom att trycka på hjärtat
+                    </Text>
+                    <TouchableOpacity
+                        style={styles.exploreButton}
+                        onPress={() => router.push('/')}
+                    >
+                        <Text style={styles.exploreButtonText}>Utforska platser</Text>
+                    </TouchableOpacity>
+                </View>
+            ) : (
