@@ -114,5 +114,20 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingHorizontal: 20,
     },
+    backButton: {
+        width: 44,
+        height: 44,
+        borderRadius: 22,
+        backgroundColor: '#f0f0f0',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    backIcon: {
+        fontSize: 20,
+        color: '#333',
+        fontWeight: 'bold',
+        textAlign: 'center',
+        lineHeight: 44,
+    },
 
 });
