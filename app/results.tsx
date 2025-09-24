@@ -154,5 +154,28 @@ const styles = StyleSheet.create({
     placeholder: {
         width: 44,
     },
+    resultsContainer: {
+        paddingHorizontal: 20,
+        paddingVertical: 16,
+        alignItems: 'center',
+        backgroundColor: '#f8f8f8',
+    },
+    resultsTitle: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#333',
+        marginBottom: 4,
+        textAlign: 'center',
+    },
+    resultsSubtitle: {
+        fontSize: 14,
+        color: '#666',
+    },
+    scrollView: {
+        flex: 1,
+    },
+    scrollContent: {
+        paddingBottom: 20,
+    },
 
 });
