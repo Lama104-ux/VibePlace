@@ -129,5 +129,30 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         lineHeight: 44,
     },
+    moodInfo: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    moodEmoji: {
+        fontSize: 40,
+        marginBottom: 4,
+        textAlign: 'center',
+    },
+    moodName: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: '#333',
+        marginBottom: 2,
+        textAlign: 'center',
+    },
+    moodDescription: {
+        fontSize: 14,
+        color: '#666',
+        textAlign: 'center',
+    },
+    placeholder: {
+        width: 44,
+    },
 
 });
