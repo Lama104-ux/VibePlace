@@ -151,48 +151,5 @@ const styles = StyleSheet.create({
         lineHeight: 24,
         marginBottom: 30,
     },
-    exploreButton: {
-        backgroundColor: '#007AFF',
-        paddingHorizontal: 24,
-        paddingVertical: 12,
-        borderRadius: 25,
-    },
-    exploreButtonText: {
-        fontSize: 16,
-        fontWeight: '600',
-        color: 'white',
-    },
-    scrollView: {
-        flex: 1,
-    },
-    scrollContent: {
-        paddingBottom: 20,
-    },
-    moodSection: {
-        marginBottom: 24,
-    },
-    moodHeader: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        paddingHorizontal: 20,
-        marginBottom: 12,
-        marginTop: 16,
-    },
-    moodEmoji: {
-        fontSize: 32,
-        marginRight: 12,
-    },
-    moodInfo: {
-        flex: 1,
-    },
-    moodName: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        color: 'black',
-        marginBottom: 2,
-    },
-    moodCount: {
-        fontSize: 14,
-        color: '#666',
-    },
+
 });
