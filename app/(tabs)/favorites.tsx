@@ -30,3 +30,5 @@ export default function FavoritesScreen() {
         return acc;
     }, {} as Record<MoodType, Place[]>);
 
+    // Få alla humör som har favoriter
+    const moodsWithFavorites = Object.keys(favoritesByMood) as MoodType[];
