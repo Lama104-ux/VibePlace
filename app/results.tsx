@@ -31,3 +31,31 @@ export default function ResultsScreen() {
     const handleBackPress = () => {
         router.back();
     };
+
+    return (
+        <SafeAreaView style={styles.container}>
+            <StatusBar style="dark" />
+
+            {/* Header med humörinformation */}
+            <View style={styles.header}>
+                <View style={styles.headerContent}>
+                    <TouchableOpacity
+                        style={styles.backButton}
+                        onPress={handleBackPress}
+                    >
+                        <Text style={styles.backIcon}>←</Text>
+                    </TouchableOpacity>
+
+                    <View style={styles.moodInfo}>
+                        <Text style={[styles.moodEmoji, { color: currentMood.color }]}>
+                            {currentMood.emoji}
+                        </Text>
+                        <Text style={styles.moodName}>Humör: {currentMood.name}</Text>
+                        <Text style={styles.moodDescription}>{currentMood.description}</Text>
+                    </View>
+
+                    {/* Tom div för att centrera innehållet */}
+                    <View style={styles.placeholder} />
+                </View>
+            </View>
+
