@@ -59,3 +59,42 @@ export default function ResultsScreen() {
                 </View>
             </View>
 
+            {/* Resultat */}
+            <View style={styles.resultsContainer}>
+                <Text style={styles.resultsTitle}>
+                    Rekommenderade platser för dig
+                </Text>
+                <Text style={styles.resultsSubtitle}>
+                    {filteredPlaces.length} platser hittades
+                </Text>
+            </View>
+
+            {/* Lista med platser */}
+            <ScrollView
+                style={styles.scrollView}
+                contentContainerStyle={styles.scrollContent}
+                showsVerticalScrollIndicator={false}
+            >
+                {filteredPlaces.length > 0 ? (
+                    filteredPlaces.map((place, index) => (
+                        <PlaceCard
+                            key={place.id}
+                            place={place}
+                            index={index}
+                            onPress={handlePlacePress}
+                        />
+                    ))
+                ) : (
+                    <View style={styles.emptyContainer}>
+                        <Text style={styles.emptyText}>
+                            Inga platser hittades för detta humör
+                        </Text>
+                        <Text style={styles.emptySubtext}>
+                            Prova ett annat humör eller kontrollera din internetanslutning
+                        </Text>
+                    </View>
+                )}
+            </ScrollView>
+        </SafeAreaView>
+    );
+}
