@@ -98,3 +98,21 @@ export default function ResultsScreen() {
         </SafeAreaView>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: 'white',
+    },
+    header: {
+        borderBottomWidth: 1,
+        borderBottomColor: '#eee',
+        paddingVertical: 15,
+    },
+    headerContent: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingHorizontal: 20,
+    },
+
+});
