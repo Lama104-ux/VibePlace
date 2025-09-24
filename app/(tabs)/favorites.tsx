@@ -151,5 +151,22 @@ const styles = StyleSheet.create({
         lineHeight: 24,
         marginBottom: 30,
     },
+    exploreButton: {
+        backgroundColor: '#007AFF',
+        paddingHorizontal: 24,
+        paddingVertical: 12,
+        borderRadius: 25,
+    },
+    exploreButtonText: {
+        fontSize: 16,
+        fontWeight: '600',
+        color: 'white',
+    },
+    scrollView: {
+        flex: 1,
+    },
+    scrollContent: {
+        paddingBottom: 20,
+    },
 
 });
