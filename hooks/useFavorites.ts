@@ -41,3 +41,8 @@ export const useFavorites = () => {
         await saveFavorites(updatedFavorites);
     };
 
+    const removeFromFavorites = async (placeId: string) => {
+        const updatedFavorites = favorites.filter(fav => fav.id !== placeId);
+        await saveFavorites(updatedFavorites);
+    };
+
