@@ -187,3 +187,50 @@ export const PLACES: Place[] = [
         image: 'https://images.unsplash.com/photo-1530549387789-4c1017266635?w=400&auto=format&fit=crop'
     },
 
+    // TRÖTT - 5 vilsamma platser
+    {
+        id: 'tired1',
+        name: 'Stadsparken',
+        description: 'Bekväma bänkar under träd för vila och återhämtning',
+        type: 'Park',
+        moodMatch: ['tired'],
+        address: '503 38 Borås',
+        image: 'https://images.unsplash.com/photo-1567653418876-5bb0e566e1c2?w=400&auto=format&fit=crop'
+    },
+    {
+        id: 'tired2',
+        name: 'Divine Presse Café',
+        description: 'Sköna fåtöljer och lugn miljö för avkoppling',
+        type: 'Kafé',
+        moodMatch: ['tired'],
+        address: 'Sandgärdsgatan 21, 503 34 Borås',
+        image: 'https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=400&auto=format&fit=crop'
+    },
+    {
+        id: 'tired3',
+        name: 'Stadsbiblioteket',
+        description: 'Tysta, bekväma platser att vila och läsa',
+        type: 'Bibliotek',
+        moodMatch: ['tired'],
+        address: 'P A Halls Terrass, 503 42 Borås',
+        image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&auto=format&fit=crop'
+    },
+    {
+        id: 'tired4',
+        name: 'Borås Konstmuseum',
+        description: 'Lugna utställningslokaler att vandra i sakta tempo',
+        type: 'Museum',
+        moodMatch: ['tired'],
+        address: 'P A Halls Terrass 2, 504 56 Borås',
+        image: 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400&auto=format&fit=crop'
+    },
+    {
+        id: 'tired5',
+        name: 'Ramnasjön runt',
+        description: 'Lugn promenad för återhämtning vid vattnet',
+        type: 'Promenadstråk',
+        moodMatch: ['tired'],
+        address: 'Ramnavägen 37, 504 39 Borås',
+        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&auto=format&fit=crop'
+    },
+
