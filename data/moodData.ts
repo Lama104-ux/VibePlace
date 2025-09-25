@@ -281,3 +281,50 @@ export const PLACES: Place[] = [
         image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9d1?w=400&auto=format&fit=crop'
     },
 
+    // ARG - 5 aktiva platser
+    {
+        id: 'angry1',
+        name: 'Ryda Sportcenter',
+        description: 'Gym för att träna ut frustrationen med kraftträning',
+        type: 'Sportcenter',
+        moodMatch: ['angry'],
+        address: 'Almenäsvägen 14, 506 32 Borås',
+        image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&auto=format&fit=crop'
+    },
+    {
+        id: 'angry2',
+        name: 'Borås Bowlinghall',
+        description: 'Fysisk aktivitet för att släppa ut spänning',
+        type: 'Bowlinghall',
+        moodMatch: ['angry'],
+        address: 'Bockasjögatan 2, 504 30 Borås',
+        image: 'https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=400&auto=format&fit=crop'
+    },
+    {
+        id: 'angry3',
+        name: 'Boulehallen',
+        description: 'Koncentrerad sport för fokusering bort från ilska',
+        type: 'Sporthall',
+        moodMatch: ['angry'],
+        address: 'Ålgårdsvägen 30, 506 30 Borås',
+        image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&auto=format&fit=crop'
+    },
+    {
+        id: 'angry4',
+        name: 'Borås Arena',
+        description: 'Skrika av sig känslorna på en match med publik',
+        type: 'Arena',
+        moodMatch: ['angry'],
+        address: 'Ålgårdsvägen 16, 506 30 Borås',
+        image: 'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=400&auto=format&fit=crop'
+    },
+    {
+        id: 'angry5',
+        name: 'Kypesjön',
+        description: 'Stora skogsstigar runt sjön för energisk vandring',
+        type: 'Naturområde',
+        moodMatch: ['angry'],
+        address: '506 38 Borås',
+        image: 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&auto=format&fit=crop'
+    }
+];
