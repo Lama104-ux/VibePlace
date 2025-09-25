@@ -27,3 +27,12 @@ export const useFavorites = () => {
         }
     };
 
+    const saveFavorites = async (newFavorites: Place[]) => {
+        try {
+            await SecureStore.setItemAsync(FAVORITES_KEY, JSON.stringify(newFavorites));
+            setFavorites(newFavorites);
+        } catch (error) {
+            console.error('Error saving favorites:', error);
+        }
+    };
+
