@@ -46,3 +46,26 @@ export const useFavorites = () => {
         await saveFavorites(updatedFavorites);
     };
 
+    const toggleFavorite = async (place: Place) => {
+        const isFavorite = favorites.some(fav => fav.id === place.id);
+
+        if (isFavorite) {
+            await removeFromFavorites(place.id);
+        } else {
+            await addToFavorites(place);
+        }
+    };
+
+    const isFavorite = (placeId: string): boolean => {
+        return favorites.some(fav => fav.id === placeId);
+    };
+
+    return {
+        favorites,
+        addToFavorites,
+        removeFromFavorites,
+        toggleFavorite,
+        isFavorite,
+        loadFavorites,
+    };
+};
