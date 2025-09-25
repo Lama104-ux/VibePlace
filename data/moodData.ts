@@ -93,3 +93,50 @@ export const PLACES: Place[] = [
         image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&auto=format&fit=crop'
     },
 
+    // GLAD - 5 livliga platser
+    {
+        id: 'happy1',
+        name: 'Knalleland',
+        description: 'Nöjespark för ren glädje och skratt',
+        type: 'Nöjespark',
+        moodMatch: ['happy'],
+        address: 'Bergslenagatan 45, 506 30 Borås',
+        image: 'https://images.unsplash.com/photo-1594736797933-d0f6b2703fb8?w=400&auto=format&fit=crop'
+    },
+    {
+        id: 'happy2',
+        name: 'Stora torget',
+        description: 'Liv och rörelse, särskilt vid marknader och evenemang',
+        type: 'Torg',
+        moodMatch: ['happy'],
+        address: 'Torggatan, 503 34 Borås',
+        image: 'https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=400&auto=format&fit=crop'
+    },
+    {
+        id: 'happy3',
+        name: 'Borås Centrum/Stora Torget',
+        description: 'Livlig stadskärna med folk och aktivitet',
+        type: 'Stadskärna',
+        moodMatch: ['happy'],
+        address: 'Torggatan, 503 34 Borås',
+        image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&auto=format&fit=crop'
+    },
+    {
+        id: 'happy4',
+        name: 'Textilmuseet',
+        description: 'Kreativ och inspirerande miljö med interaktiva utställningar',
+        type: 'Museum',
+        moodMatch: ['happy'],
+        address: 'Skaraborgsvägen 3, 506 30 Borås',
+        image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&auto=format&fit=crop'
+    },
+    {
+        id: 'happy5',
+        name: 'Navet Kulturhus',
+        description: 'Evenemang, musik och social atmosfär för alla åldrar',
+        type: 'Kulturhus',
+        moodMatch: ['happy'],
+        address: 'Skaraborgsvägen 1A, 506 30 Borås',
+        image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&auto=format&fit=crop'
+    },
+
