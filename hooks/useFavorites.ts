@@ -36,3 +36,8 @@ export const useFavorites = () => {
         }
     };
 
+    const addToFavorites = async (place: Place) => {
+        const updatedFavorites = [...favorites, { ...place, isFavorite: true }];
+        await saveFavorites(updatedFavorites);
+    };
+
