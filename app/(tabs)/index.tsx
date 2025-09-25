@@ -84,5 +84,23 @@ const styles = StyleSheet.create({
     color: 'black',
     marginBottom: 8,
   },
-
+  subtitle: {
+    fontSize: 20,
+    color: 'black',
+    marginBottom: 8,
+    textAlign: 'center',
+  },
+  description: {
+    fontSize: 14,
+    color: '#666',
+    textAlign: 'center',
+    paddingHorizontal: 20,
+  },
+  moodGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    paddingHorizontal: 10,
+    marginTop: 20,
+  },
 });
