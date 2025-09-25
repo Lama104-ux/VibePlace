@@ -234,3 +234,50 @@ export const PLACES: Place[] = [
         image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&auto=format&fit=crop'
     },
 
+    // TÄNKANDE - 5 inspirerande platser
+    {
+        id: 'thoughtful1',
+        name: 'Abecita Konstmuseum',
+        description: 'Inspirerande konst för reflektion och kreativitet',
+        type: 'Konstmuseum',
+        moodMatch: ['thoughtful'],
+        address: 'Herrljungagatan 15, 506 30 Borås',
+        image: 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400&auto=format&fit=crop'
+    },
+    {
+        id: 'thoughtful2',
+        name: 'Kulturhuset',
+        description: 'Ta plats i en stillsam hörna för eftertanke',
+        type: 'Kulturhus',
+        moodMatch: ['thoughtful'],
+        address: 'P A Halls Terrass, 503 42 Borås',
+        image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&auto=format&fit=crop'
+    },
+    {
+        id: 'thoughtful3',
+        name: 'Ramnaparken',
+        description: 'Bland äldre byggnader och historia för reflektion',
+        type: 'Historisk park',
+        moodMatch: ['thoughtful'],
+        address: 'Parkgatan 29, 504 39 Borås',
+        image: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&auto=format&fit=crop'
+    },
+    {
+        id: 'thoughtful4',
+        name: 'Sandwalls park',
+        description: 'Mindre park perfekt för ensamma promenader',
+        type: 'Park',
+        moodMatch: ['thoughtful'],
+        address: '503 35 Borås',
+        image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&auto=format&fit=crop'
+    },
+    {
+        id: 'thoughtful5',
+        name: 'Högskolan Borås campus',
+        description: 'Intellektuell miljö som stimulerar tankar och lärande',
+        type: 'Högskola',
+        moodMatch: ['thoughtful'],
+        address: 'Allégatan 1, 503 32 Borås',
+        image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9d1?w=400&auto=format&fit=crop'
+    },
+
