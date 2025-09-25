@@ -140,3 +140,50 @@ export const PLACES: Place[] = [
         image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&auto=format&fit=crop'
     },
 
+    // STRESSAD - 5 avkopplande platser
+    {
+        id: 'stressed1',
+        name: 'Rya Åsar utsiktsplats',
+        description: 'Öppen vy över staden för perspektiv och klarhet',
+        type: 'Utsiktsplats',
+        moodMatch: ['stressed'],
+        address: 'Björbobacken 7, 504 68 Borås',
+        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&auto=format&fit=crop'
+    },
+    {
+        id: 'stressed2',
+        name: 'Djurparken Borås',
+        description: 'Stora ytor och lugna djur för avslappning',
+        type: 'Djurpark',
+        moodMatch: ['stressed'],
+        address: 'Alidelundsgatan 11, 506 31 Borås',
+        image: 'https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=400&auto=format&fit=crop'
+    },
+    {
+        id: 'stressed3',
+        name: 'Stadsparksbadet',
+        description: 'Energisk miljö för motion och glädje i vattnet',
+        type: 'Simhall',
+        moodMatch: ['stressed'],
+        address: 'Sven Eriksonsgatan 29, 503 38 Borås',
+        image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&auto=format&fit=crop'
+    },
+    {
+        id: 'stressed4',
+        name: 'Nordic Wellness gym Borås city',
+        description: 'Träna bort stress med professionell utrustning',
+        type: 'Gym',
+        moodMatch: ['stressed'],
+        address: 'Österlånggatan 74, 503 37 Borås',
+        image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&auto=format&fit=crop'
+    },
+    {
+        id: 'stressed5',
+        name: 'Borås Simarena',
+        description: 'Simma och koppla bort tankarna i lugnt vatten',
+        type: 'Simarena',
+        moodMatch: ['stressed'],
+        address: 'Alidelundsgatan 12, 506 31 Borås',
+        image: 'https://images.unsplash.com/photo-1530549387789-4c1017266635?w=400&auto=format&fit=crop'
+    },
+
