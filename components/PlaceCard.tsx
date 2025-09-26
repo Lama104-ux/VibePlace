@@ -58,3 +58,28 @@ export const PlaceCard: React.FC<Props> = ({ place, onPress }) => {
     );
 };
 
+const styles = StyleSheet.create({
+    container: {
+        marginHorizontal: 16,
+        marginVertical: 8,
+    },
+    card: {
+        backgroundColor: 'white',
+        borderRadius: 12,
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.1,
+        shadowRadius: 4,
+        elevation: 3,
+        overflow: 'hidden',
+    },
+    image: {
+        width: '100%',
+        height: 150,
+    },
+    content: {
+        padding: 16,
+    },
