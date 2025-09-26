@@ -21,8 +21,27 @@ export const useLocation = () => {
                 return;
             }
 
+            // Hämta nuvarande position/ Använd watch position funktion på expo.bara byt de här två rader !
+            let currentLocation = await Location.getCurrentPositionAsync({
+                accuracy: Location.Accuracy.High,
+            });
 
-        };
+            const userLoc: UserLocation = {
+                latitude: currentLocation.coords.latitude,
+                longitude: currentLocation.coords.longitude,
+                accuracy: currentLocation.coords.accuracy || undefined,
+            };
 
-
+            setLocation(userLoc);
+            setUserLocation(userLoc); // Uppdatera global state
+            setErrorMsg(null);
+        } catch (error) {
+            setErrorMsg('Error getting location');
+            console.error('Location error:', error);
+        } finally {
+            setLoading(false);
+        }
     };
+
+
+};
