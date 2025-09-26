@@ -152,3 +152,47 @@ const styles = StyleSheet.create({
         alignItems: 'flex-start',
         marginBottom: 16,
     },
+    titleSection: {
+        flex: 1,
+    },
+    name: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        color: '#333',
+        marginBottom: 4,
+    },
+    type: {
+        fontSize: 16,
+        color: '#007AFF',
+        fontWeight: '600',
+        marginBottom: 4,
+    },
+    address: {
+        fontSize: 14,
+        color: '#666',
+        fontStyle: 'italic',
+        lineHeight: 18,
+    },
+    favoriteButton: {
+        padding: 8,
+    },
+    favoriteIcon: {
+        fontSize: 28,
+    },
+    description: {
+        fontSize: 16,
+        color: '#333',
+        lineHeight: 22,
+        marginBottom: 24,
+    },
+    infoSection: {
+        backgroundColor: '#f8f8f8',
+        padding: 16,
+        borderRadius: 8,
+    },
+    sectionTitle: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#333',
+        marginBottom: 12,
+    },
