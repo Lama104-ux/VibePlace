@@ -83,3 +83,39 @@ const styles = StyleSheet.create({
     content: {
         padding: 16,
     },
+    header: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginBottom: 4,
+    },
+    name: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#333',
+        flex: 1,
+    },
+    favoriteButton: {
+        padding: 4,
+    },
+    favoriteIcon: {
+        fontSize: 20,
+    },
+    type: {
+        fontSize: 14,
+        color: '#007AFF',
+        marginBottom: 4,
+        fontWeight: '600',
+    },
+    address: {
+        fontSize: 13,
+        color: '#666',
+        marginBottom: 8,
+        fontStyle: 'italic',
+    },
+    description: {
+        fontSize: 14,
+        color: '#666',
+        lineHeight: 18,
+    },
+});
