@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Image } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Image, Linking } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter, useLocalSearchParams } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
@@ -10,8 +10,8 @@ export default function PlaceDetailScreen() {
     const router = useRouter();
     const { id } = useLocalSearchParams();
     const { toggleFavorite, isFavorite } = useFavorites();
-    
-    // Hitta platsen baserat på ID
+
+     // Hitta platsen baserat på ID
     const place = PLACES.find(p => p.id === id);
 
     if (!place) {
@@ -37,7 +37,17 @@ export default function PlaceDetailScreen() {
         toggleFavorite(place);
     };
 
-    // Hitta humörnamn för varje mood ID
+    // Öppna adressen i Google Maps
+    const openInMaps = () => {
+        const address = encodeURIComponent(place.address);
+        const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${address}`;
+        
+        Linking.openURL(googleMapsUrl).catch(err => 
+            console.error('Kunde inte öppna Google Maps:', err)
+        );
+    };
+
+ // Hitta humörnamn för varje mood ID
     const getMoodNames = (moodIds: string[]): string => {
         return moodIds.map(moodId => {
             const mood = MOODS.find(m => m.id === moodId);
@@ -63,7 +73,6 @@ export default function PlaceDetailScreen() {
                         <View style={styles.titleSection}>
                             <Text style={styles.name}>{place.name}</Text>
                             <Text style={styles.type}>{place.type}</Text>
-                           
                         </View>
 
                         <TouchableOpacity
@@ -81,10 +90,17 @@ export default function PlaceDetailScreen() {
                     <View style={styles.infoSection}>
                         <Text style={styles.sectionTitle}>Information</Text>
                         
+                        {/* Klickbar adress */}
                         <View style={styles.infoRow}>
                             <Text style={styles.infoLabel}>Adress:</Text>
-                            <Text style={styles.infoValue}>{place.address}</Text>
+                            <TouchableOpacity onPress={openInMaps} style={styles.addressButton}>
+                                <Text style={styles.addressLink}>
+                                    {place.address}
+                                </Text>
+                                <Text style={styles.mapIcon}> 📍</Text>
+                            </TouchableOpacity>
                         </View>
+                        
                         <View style={styles.infoRow}>
                             <Text style={styles.infoLabel}>Passar för humör:</Text>
                             <Text style={styles.infoValue}>
@@ -203,6 +219,7 @@ const styles = StyleSheet.create({
         flex: 1,
         lineHeight: 18,
     },
+
     backButtonFloat: {
         position: 'absolute',
         top: 60,
