@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
         width: 160,
         height: 120,
         marginHorizontal: 15,
-        marginVertical: 8,
+        marginVertical: 20,
         borderRadius: 16,
         overflow: 'hidden',
         shadowColor: '#000',
