@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     button: {
         width: 160,
         height: 120,
-        marginHorizontal: 8,
+        marginHorizontal: 15,
         marginVertical: 8,
         borderRadius: 16,
         overflow: 'hidden',
