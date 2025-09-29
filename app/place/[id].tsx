@@ -219,6 +219,23 @@ const styles = StyleSheet.create({
         flex: 1,
         lineHeight: 18,
     },
+       addressButton: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    addressLink: {
+        fontSize: 14,
+        color: '#007AFF',
+        textDecorationLine: 'underline',
+        flex: 1,
+        lineHeight: 18,
+    },
+    mapIcon: {
+        fontSize: 16,
+        marginLeft: 4,
+    },
+
 
     backButtonFloat: {
         position: 'absolute',
