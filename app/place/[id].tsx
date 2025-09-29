@@ -10,7 +10,7 @@ export default function PlaceDetailScreen() {
     const router = useRouter();
     const { id } = useLocalSearchParams();
     const { toggleFavorite, isFavorite } = useFavorites();
-
+    
     // Hitta platsen baserat på ID
     const place = PLACES.find(p => p.id === id);
 
@@ -63,7 +63,7 @@ export default function PlaceDetailScreen() {
                         <View style={styles.titleSection}>
                             <Text style={styles.name}>{place.name}</Text>
                             <Text style={styles.type}>{place.type}</Text>
-                            <Text style={styles.address}>{place.address}</Text>
+                           
                         </View>
 
                         <TouchableOpacity
@@ -80,10 +80,7 @@ export default function PlaceDetailScreen() {
 
                     <View style={styles.infoSection}>
                         <Text style={styles.sectionTitle}>Information</Text>
-                        <View style={styles.infoRow}>
-                            <Text style={styles.infoLabel}>Typ:</Text>
-                            <Text style={styles.infoValue}>{place.type}</Text>
-                        </View>
+                        
                         <View style={styles.infoRow}>
                             <Text style={styles.infoLabel}>Adress:</Text>
                             <Text style={styles.infoValue}>{place.address}</Text>
@@ -165,13 +162,6 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: '#007AFF',
         fontWeight: '600',
-        marginBottom: 4,
-    },
-    address: {
-        fontSize: 14,
-        color: '#666',
-        fontStyle: 'italic',
-        lineHeight: 18,
     },
     favoriteButton: {
         padding: 8,
