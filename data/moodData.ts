@@ -54,7 +54,7 @@ export const PLACES: Place[] = [
         type: 'Bibliotek',
         moodMatch: ['sad'],
         address: 'P A Halls Terrass, 503 42 Borås',
-        image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=400&auto=format&fit=crop'
     },
     {
         id: 'sad2',
@@ -63,7 +63,7 @@ export const PLACES: Place[] = [
         type: 'Naturreservat',
         moodMatch: ['sad'],
         address: 'Björbobacken 7, 504 68 Borås',
-        image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1511497584788-876760111969?w=400&auto=format&fit=crop'
     },
     {
         id: 'sad3',
@@ -72,7 +72,7 @@ export const PLACES: Place[] = [
         type: 'Kafé',
         moodMatch: ['sad'],
         address: 'Södra Strandgatan 6, 503 35 Borås',
-        image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&auto=format&fit=crop'
     },
     {
         id: 'sad4',
@@ -81,7 +81,7 @@ export const PLACES: Place[] = [
         type: 'Park',
         moodMatch: ['sad'],
         address: 'Parkgatan 29, 504 39 Borås',
-        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1519331379826-f10be5486c6f?w=400&auto=format&fit=crop'
     },
     {
         id: 'sad5',
@@ -90,7 +90,7 @@ export const PLACES: Place[] = [
         type: 'Park',
         moodMatch: ['sad'],
         address: 'Annelunds parkväg, 503 36 Borås',
-        image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&auto=format&fit=crop'
+        image: 'https://plus.unsplash.com/premium_photo-1758279868295-77a268124635?w=400&auto=format&fit=crop'
     },
 
     // GLAD - 5 livliga platser
@@ -101,7 +101,7 @@ export const PLACES: Place[] = [
         type: 'Nöjespark',
         moodMatch: ['happy'],
         address: 'Bergslenagatan 45, 506 30 Borås',
-        image: 'https://images.unsplash.com/photo-1594736797933-d0f6b2703fb8?w=400&auto=format&fit=crop'
+       image: 'https://plus.unsplash.com/premium_photo-1700824490100-f82146b2441f?w=400&auto=format&fit=crop'
     },
     {
         id: 'happy2',
@@ -110,7 +110,7 @@ export const PLACES: Place[] = [
         type: 'Torg',
         moodMatch: ['happy'],
         address: 'Torggatan, 503 34 Borås',
-        image: 'https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=400&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&auto=format&fit=crop'
     },
     {
         id: 'happy3',
@@ -119,7 +119,7 @@ export const PLACES: Place[] = [
         type: 'Stadskärna',
         moodMatch: ['happy'],
         address: 'Torggatan, 503 34 Borås',
-        image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=400&auto=format&fit=crop'
     },
     {
         id: 'happy4',
@@ -128,7 +128,7 @@ export const PLACES: Place[] = [
         type: 'Museum',
         moodMatch: ['happy'],
         address: 'Skaraborgsvägen 3, 506 30 Borås',
-        image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&auto=format&fit=crop'
+       image: 'https://images.unsplash.com/photo-1600603955515-773fe759de4e?w=400&auto=format&fit=crop'
     },
     {
         id: 'happy5',
@@ -137,7 +137,7 @@ export const PLACES: Place[] = [
         type: 'Kulturhus',
         moodMatch: ['happy'],
         address: 'Skaraborgsvägen 1A, 506 30 Borås',
-        image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&auto=format&fit=crop'
     },
 
     // STRESSAD - 5 avkopplande platser
@@ -157,7 +157,7 @@ export const PLACES: Place[] = [
         type: 'Djurpark',
         moodMatch: ['stressed'],
         address: 'Alidelundsgatan 11, 506 31 Borås',
-        image: 'https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=400&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?w=400&auto=format&fit=crop'
     },
     {
         id: 'stressed3',
@@ -166,7 +166,7 @@ export const PLACES: Place[] = [
         type: 'Simhall',
         moodMatch: ['stressed'],
         address: 'Sven Eriksonsgatan 29, 503 38 Borås',
-        image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1519315901367-f34ff9154487?w=400&auto=format&fit=crop'
     },
     {
         id: 'stressed4',
@@ -175,7 +175,7 @@ export const PLACES: Place[] = [
         type: 'Gym',
         moodMatch: ['stressed'],
         address: 'Österlånggatan 74, 503 37 Borås',
-        image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=400&auto=format&fit=crop'
     },
     {
         id: 'stressed5',
@@ -184,7 +184,7 @@ export const PLACES: Place[] = [
         type: 'Simarena',
         moodMatch: ['stressed'],
         address: 'Alidelundsgatan 12, 506 31 Borås',
-        image: 'https://images.unsplash.com/photo-1530549387789-4c1017266635?w=400&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=400&auto=format&fit=crop'
     },
 
     // TRÖTT - 5 vilsamma platser
@@ -195,7 +195,7 @@ export const PLACES: Place[] = [
         type: 'Park',
         moodMatch: ['tired'],
         address: '503 38 Borås',
-        image: 'https://images.unsplash.com/photo-1567653418876-5bb0e566e1c2?w=400&auto=format&fit=crop'
+      image: 'https://images.unsplash.com/photo-1714386935945-d2d6c5797c45?w=400&auto=format&fit=crop'
     },
     {
         id: 'tired2',
@@ -204,7 +204,7 @@ export const PLACES: Place[] = [
         type: 'Kafé',
         moodMatch: ['tired'],
         address: 'Sandgärdsgatan 21, 503 34 Borås',
-        image: 'https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=400&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=400&auto=format&fit=crop'
     },
     {
         id: 'tired3',
@@ -213,7 +213,7 @@ export const PLACES: Place[] = [
         type: 'Bibliotek',
         moodMatch: ['tired'],
         address: 'P A Halls Terrass, 503 42 Borås',
-        image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=400&auto=format&fit=crop'
     },
     {
         id: 'tired4',
@@ -231,7 +231,7 @@ export const PLACES: Place[] = [
         type: 'Promenadstråk',
         moodMatch: ['tired'],
         address: 'Ramnavägen 37, 504 39 Borås',
-        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=400&auto=format&fit=crop'
     },
 
     // TÄNKANDE - 5 inspirerande platser
@@ -260,7 +260,7 @@ export const PLACES: Place[] = [
         type: 'Historisk park',
         moodMatch: ['thoughtful'],
         address: 'Parkgatan 29, 504 39 Borås',
-        image: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1604537466158-719b1972feb8?w=400&auto=format&fit=crop'
     },
     {
         id: 'thoughtful4',
@@ -269,7 +269,7 @@ export const PLACES: Place[] = [
         type: 'Park',
         moodMatch: ['thoughtful'],
         address: '503 35 Borås',
-        image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=400&auto=format&fit=crop'
     },
     {
         id: 'thoughtful5',
@@ -278,7 +278,7 @@ export const PLACES: Place[] = [
         type: 'Högskola',
         moodMatch: ['thoughtful'],
         address: 'Allégatan 1, 503 32 Borås',
-        image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9d1?w=400&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1562774053-701939374585?w=400&auto=format&fit=crop'
     },
 
     // ARG - 5 aktiva platser
@@ -298,7 +298,7 @@ export const PLACES: Place[] = [
         type: 'Bowlinghall',
         moodMatch: ['angry'],
         address: 'Bockasjögatan 2, 504 30 Borås',
-        image: 'https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=400&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1608751613440-8880d1a0a1a0?w=400&auto=format&fit=crop'
     },
     {
         id: 'angry3',
@@ -307,7 +307,7 @@ export const PLACES: Place[] = [
         type: 'Sporthall',
         moodMatch: ['angry'],
         address: 'Ålgårdsvägen 30, 506 30 Borås',
-        image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&auto=format&fit=crop'
+   image: 'https://images.unsplash.com/photo-1609513677385-5d2b049d9431?w=400&auto=format&fit=crop'
     },
     {
         id: 'angry4',
@@ -316,7 +316,7 @@ export const PLACES: Place[] = [
         type: 'Arena',
         moodMatch: ['angry'],
         address: 'Ålgårdsvägen 16, 506 30 Borås',
-        image: 'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=400&auto=format&fit=crop'
+       image: 'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=400&auto=format&fit=crop'
     },
     {
         id: 'angry5',
@@ -325,6 +325,6 @@ export const PLACES: Place[] = [
         type: 'Naturområde',
         moodMatch: ['angry'],
         address: '506 38 Borås',
-        image: 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1551632811-561732d1e306?w=400&auto=format&fit=crop'
     }
 ];
