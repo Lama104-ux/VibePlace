@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { useSetAtom } from 'jotai';
@@ -7,6 +7,7 @@ import { StatusBar } from 'expo-status-bar';
 
 import { MoodButton } from '../../components/MoodButton';
 import { selectedMoodAtom, recommendedPlacesAtom } from '../../store/moodStore';
+import { useLocation } from '../../hooks/useLocation';
 import { MOODS, PLACES } from '../../data/moodData';
 import { Mood } from '../../types/mood';
 
@@ -14,19 +15,27 @@ export default function HomeScreen() {
   const router = useRouter();
   const setSelectedMood = useSetAtom(selectedMoodAtom);
   const setRecommendedPlaces = useSetAtom(recommendedPlacesAtom);
+  const { getCurrentLocation, location, address, errorMsg, stopWatching } = useLocation();
 
-  // Hantera humörval
+  useEffect(() => {
+    getCurrentLocation();
+    
+    return () => {
+      stopWatching();
+    };
+  }, []);
+
+
   const handleMoodSelect = (mood: Mood) => {
     setSelectedMood(mood.id);
 
-    // Filtrera platser som matchar humöret
+
     const matchingPlaces = PLACES.filter(place =>
       place.moodMatch.includes(mood.id)
     );
 
     setRecommendedPlaces(matchingPlaces);
 
-    // Navigera till resultatskärmen
     router.push('/results');
   };
 
@@ -57,6 +66,20 @@ export default function HomeScreen() {
               onPress={handleMoodSelect}
             />
           ))}
+        </View>
+
+        {/* Visa användarens position status */}
+        <View style={styles.locationStatus}>
+          <Text style={styles.locationText}>
+            {errorMsg
+              ? `❌ ${errorMsg}`
+              : address 
+              ? `📍 ${address}` 
+              : location
+              ? '📍 Hämtar adress...'
+              : '🔍 Söker din position...'
+            }
+          </Text>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -102,5 +125,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 10,
     marginTop: 20,
+  },
+  locationStatus: {
+    marginTop: 30,
+    paddingHorizontal: 20,
+    alignItems: 'center',
+  },
+  locationText: {
+    fontSize: 12,
+    color: '#666',
+    textAlign: 'center',
   },
 });
