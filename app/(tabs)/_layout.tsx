@@ -1,4 +1,3 @@
-// Tab navigation layout för min app
 import { Tabs } from 'expo-router';
 import React from 'react';
 import { Platform, Text } from 'react-native';
