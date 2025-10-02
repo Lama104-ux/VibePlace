@@ -15,7 +15,6 @@ export default function RootLayout() {
   const [loaded] = useFonts({
 
   });
-
   useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync();
