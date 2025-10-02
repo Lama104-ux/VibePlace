@@ -16,7 +16,6 @@ export default function FavoritesScreen() {
     const handlePlacePress = (place: Place) => {
         router.push(`/place/${place.id}`);
     };
-
     // Gruppera favoriter efter humör
     const favoritesByMood = favorites.reduce((acc, place) => {
         place.moodMatch.forEach(mood => {
@@ -29,7 +28,6 @@ export default function FavoritesScreen() {
         });
         return acc;
     }, {} as Record<MoodType, Place[]>);
-
     // Få alla humör som har favoriter
     const moodsWithFavorites = Object.keys(favoritesByMood) as MoodType[];
 
@@ -44,7 +42,6 @@ export default function FavoritesScreen() {
                     {favorites.length} sparade platser
                 </Text>
             </View>
-
             {favorites.length === 0 ? (
                 // Tom skärm när inga favoriter finns
                 <View style={styles.emptyContainer}>
@@ -103,7 +100,6 @@ export default function FavoritesScreen() {
         </SafeAreaView>
     );
 }
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
