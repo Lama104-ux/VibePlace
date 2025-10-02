@@ -31,7 +31,7 @@ export default function TabLayout() {
         options={{
           title: 'Hemkänsla',
           tabBarIcon: ({ color, size }) => (
-            <Text style={{ fontSize: size || 24 }}>🏠</Text>
+            <Text style={{ fontSize: size  }}>🏠</Text>
           ),
         }}
       />
