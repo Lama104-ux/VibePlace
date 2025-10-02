@@ -15,12 +15,10 @@ export const useLocation = () => {
     // Funktion för att hämta adress från koordinater med fallback till Google API
     const getAddressFromCoords = async (latitude: number, longitude: number) => {
         try {
-      
             const result = await Location.reverseGeocodeAsync({
                 latitude,
                 longitude,
             });
-
             if (result && result.length > 0) {
                 const addr = result[0];
                 
@@ -30,7 +28,6 @@ export const useLocation = () => {
                     addr.region,
                     addr.country
                 ].filter(Boolean);
-                
                 const formattedAddress = addressParts.join(', ');
                 
                 // Om vi inte får någon bra adress, försök med fetch API istället
@@ -49,7 +46,6 @@ export const useLocation = () => {
             setAddress(`${latitude.toFixed(4)}, ${longitude.toFixed(4)}`);
         }
     };
-
     // Alternativ metod Hämta adress från OpenStreetMap Nominatim api
     const fetchAddressFromAPI = async (latitude: number, longitude: number) => {
         try {
@@ -61,9 +57,8 @@ export const useLocation = () => {
                     }
                 }
             );
-            
             const data = await response.json();
-            
+
             if (data && data.address) {
                 const addr = data.address;
                 const addressParts = [
@@ -83,7 +78,6 @@ export const useLocation = () => {
             setAddress(`${latitude.toFixed(4)}, ${longitude.toFixed(4)}`);
         }
     };
-
     const getCurrentLocation = async () => {
         setLoading(true);
         try {
@@ -94,26 +88,6 @@ export const useLocation = () => {
                 setLoading(false);
                 return;
             }
-
-            //  Hämta nuvarande position direkt för att visa den omedelbart
-            const currentLocation = await Location.getCurrentPositionAsync({
-                accuracy: Location.Accuracy.High,
-            });
-
-            const userLoc: UserLocation = {
-                latitude: currentLocation.coords.latitude,
-                longitude: currentLocation.coords.longitude,
-                accuracy: currentLocation.coords.accuracy || undefined,
-            };
-
-            console.log('📍 Din position:', userLoc); 
-
-            setLocation(userLoc);
-            setUserLocation(userLoc);
-            setErrorMsg(null);
-            setLoading(false);
-
-            await getAddressFromCoords(userLoc.latitude, userLoc.longitude);
 
             const locationSubscription = await Location.watchPositionAsync(
                 {
@@ -131,7 +105,6 @@ export const useLocation = () => {
                     setLocation(updatedLoc);
                     setUserLocation(updatedLoc);
                     
-                   
                     await getAddressFromCoords(updatedLoc.latitude, updatedLoc.longitude);
                 }
             );
@@ -156,8 +129,7 @@ export const useLocation = () => {
             stopWatching();
         };
     }, []);
-
-
+    
     return {
         location,
         address,
