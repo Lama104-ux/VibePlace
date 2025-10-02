@@ -25,7 +25,6 @@ export default function HomeScreen() {
     };
   }, []);
 
-
   const handleMoodSelect = (mood: Mood) => {
     setSelectedMood(mood.id);
 
@@ -85,7 +84,6 @@ export default function HomeScreen() {
     </SafeAreaView>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
