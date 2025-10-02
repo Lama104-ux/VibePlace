@@ -1,13 +1,11 @@
-// Animerad knapp för att välja humör med "breathing" effekt
 import React, { useEffect } from 'react';
-import { TouchableOpacity, Text, View, StyleSheet } from 'react-native';
+import { TouchableOpacity, Text,StyleSheet } from 'react-native';
 import Animated, {
     useSharedValue,
     useAnimatedStyle,
     withRepeat,
     withTiming,
     withSpring,
-    runOnJS,
 } from 'react-native-reanimated';
 import { LinearGradient } from 'expo-linear-gradient';
 import * as Haptics from 'expo-haptics';
@@ -61,11 +59,8 @@ export const MoodButton: React.FC<Props> = ({ mood, isSelected, onPress }) => {
             scale.value = withSpring(1, { duration: 200 });
         });
 
-        // Kör onPress callback
-        runOnJS(onPress)(mood);
+        onPress(mood);
     };
-
-    // Skapa gradient-färger baserat på humörfärg
     const gradientColors: [string, string] = [
         mood.color,
         mood.color + '80',
