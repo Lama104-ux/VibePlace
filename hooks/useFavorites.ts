@@ -26,7 +26,6 @@ export const useFavorites = () => {
             console.error('Error loading favorites:', error);
         }
     };
-
     const saveFavorites = async (newFavorites: Place[]) => {
         try {
             await SecureStore.setItemAsync(FAVORITES_KEY, JSON.stringify(newFavorites));
@@ -35,17 +34,14 @@ export const useFavorites = () => {
             console.error('Error saving favorites:', error);
         }
     };
-
     const addToFavorites = async (place: Place) => {
         const updatedFavorites = [...favorites, { ...place, isFavorite: true }];
         await saveFavorites(updatedFavorites);
     };
-
     const removeFromFavorites = async (placeId: string) => {
         const updatedFavorites = favorites.filter(fav => fav.id !== placeId);
         await saveFavorites(updatedFavorites);
     };
-
     const toggleFavorite = async (place: Place) => {
         const isFavorite = favorites.some(fav => fav.id === place.id);
 
@@ -55,11 +51,9 @@ export const useFavorites = () => {
             await addToFavorites(place);
         }
     };
-
     const isFavorite = (placeId: string): boolean => {
         return favorites.some(fav => fav.id === placeId);
     };
-
     return {
         favorites,
         addToFavorites,
