@@ -10,8 +10,6 @@ export default function PlaceDetailScreen() {
     const router = useRouter();
     const { id } = useLocalSearchParams();
     const { toggleFavorite, isFavorite } = useFavorites();
-
-     // Hitta platsen baserat på ID
     const place = PLACES.find(p => p.id === id);
 
     if (!place) {
@@ -30,14 +28,10 @@ export default function PlaceDetailScreen() {
             </SafeAreaView>
         );
     }
-
     const isPlaceFavorite = isFavorite(place.id);
-
     const handleFavoritePress = () => {
         toggleFavorite(place);
     };
-
-    // Öppna adressen i Google Maps
     const openInMaps = () => {
         const address = encodeURIComponent(place.address);
         const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${address}`;
