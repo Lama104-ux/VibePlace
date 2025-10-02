@@ -14,16 +14,12 @@ export default function ResultsScreen() {
     const router = useRouter();
     const [selectedMood] = useAtom(selectedMoodAtom);
     const [filteredPlaces] = useAtom(filteredPlacesAtom);
-
-    // Hitta det valda humöret
     const currentMood = MOODS.find(mood => mood.id === selectedMood);
 
-    // Om inget humör är valt, gå tillbaka till hem
     if (!selectedMood || !currentMood) {
         router.replace('/');
         return null;
     }
-
     const handlePlacePress = (place: Place) => {
         router.push(`/place/${place.id}`);
     };
@@ -54,7 +50,6 @@ export default function ResultsScreen() {
                         <Text style={styles.moodDescription}>{currentMood.description}</Text>
                     </View>
 
-                    {/* Tom div för att centrera innehållet */}
                     <View style={styles.placeholder} />
                 </View>
             </View>
@@ -98,7 +93,6 @@ export default function ResultsScreen() {
         </SafeAreaView>
     );
 }
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
